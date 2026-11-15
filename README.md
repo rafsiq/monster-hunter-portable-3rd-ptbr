@@ -21,32 +21,32 @@ https://www.youtube.com/watch?v=Uh9X6GgBxfI
 ## Imagens da tradução
 
 <p align="center">
-  <img src="imagens/ULJM05800_00004.jpg" alt="Seleção de tipos de armas na Forja de Yukumo" width="49%">
-  <img src="imagens/ULJM05800_00005.jpg" alt="Lista e descrição de habilidades" width="49%">
+  <img src="ULJM05800_00004.jpg" alt="Seleção de tipos de armas na Forja de Yukumo" width="49%">
+  <img src="ULJM05800_00005.jpg" alt="Lista e descrição de habilidades" width="49%">
 </p>
 
 <p align="center">
-  <img src="imagens/ULJM05800_00017.jpg" alt="Descrição do Arzuros" width="49%">
-  <img src="imagens/ULJM05800_00026.jpg" alt="Descrição do Tigrex" width="49%">
+  <img src="ULJM05800_00017.jpg" alt="Descrição do Arzuros" width="49%">
+  <img src="ULJM05800_00026.jpg" alt="Descrição do Tigrex" width="49%">
 </p>
 
 <p align="center">
-  <img src="imagens/ULJM05800_00019.jpg" alt="Contratação e descrição de Palicos" width="49%">
-  <img src="imagens/ULJM05800_00029.jpg" alt="Bolsa de itens e descrição da Poção" width="49%">
+  <img src="ULJM05800_00019.jpg" alt="Contratação e descrição de Palicos" width="49%">
+  <img src="ULJM05800_00029.jpg" alt="Bolsa de itens e descrição da Poção" width="49%">
 </p>
 
 <p align="center">
-  <img src="imagens/ULJM05800_00031.jpg" alt="Descrição de uma missão de abate" width="49%">
-  <img src="imagens/ULJM05800_00032.jpg" alt="Objetivo e recompensas de uma missão de abate" width="49%">
+  <img src="ULJM05800_00031.jpg" alt="Descrição de uma missão de abate" width="49%">
+  <img src="ULJM05800_00032.jpg" alt="Objetivo e recompensas de uma missão de abate" width="49%">
 </p>
 
 <p align="center">
-  <img src="imagens/ULJM05800_00034.jpg" alt="Lista e descrição de adornos" width="49%">
-  <img src="imagens/ULJM05800_00036.jpg" alt="Descrição e aprimoramento de armas" width="49%">
+  <img src="ULJM05800_00034.jpg" alt="Lista e descrição de adornos" width="49%">
+  <img src="ULJM05800_00036.jpg" alt="Descrição e aprimoramento de armas" width="49%">
 </p>
 
 <p align="center">
-  <img src="imagens/ULJM05800_00037.jpg" alt="Efeitos de melodias do Berrante de Caça" width="49%">
+  <img src="ULJM05800_00037.jpg" alt="Efeitos de melodias do Berrante de Caça" width="49%">
 </p>
 
 ## Versão do patch
@@ -72,12 +72,12 @@ A ISO japonesa sem o patch em inglês, a edição HD e arquivos compactados são
 
 ## Como instalar
 
-1. Baixe o patch correspondente à sua ISO base na [Release v1.0](https://github.com/rafsiq/monster-hunter-portable-3rd-ptbr/releases/tag/v1.0) ou na pasta [patches](patches).
+1. Baixe o patch correspondente à sua ISO base na [Release v1.0](https://github.com/rafsiq/monster-hunter-portable-3rd-ptbr/releases/tag/v1.0).
 
    | ISO base | Patch |
    | --- | --- |
-   | Inglês v6.1.0 | [`MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta`](patches/MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta) |
-   | Inglês v6.2.2 | [`MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta`](patches/MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta) |
+   | Inglês v6.1.0 | [`MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta) |
+   | Inglês v6.2.2 | [`MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta) |
 
 2. Instale ou baixe um aplicador compatível com Xdelta 3.
 3. Selecione sua ISO base como arquivo de origem.
