@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imagens/portable3rd.png" alt="Logo de Monster Hunter Portable 3rd" width="35%">
+  <img src="imagens/portable3rd.png" alt="Logo de Monster Hunter Portable 3rd" width="50%">
 </p>
 
 # Monster Hunter Portable 3rd — Tradução PT-BR
