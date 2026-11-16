@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="imagens/portable3rd.png" alt="Logo de Monster Hunter Portable 3rd" width="35%">
+</p>
+
 # Monster Hunter Portable 3rd — Tradução PT-BR
 
 Patch de tradução não oficial de **Monster Hunter Portable 3rd** para português do Brasil.
