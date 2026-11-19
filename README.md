@@ -4,7 +4,7 @@
 
 # Monster Hunter Portable 3rd — Tradução PT-BR
 
-Patch de tradução não oficial de **Monster Hunter Portable 3rd** para português do Brasil.
+Patch de tradução não oficial de **Monster Hunter Portable 3rd** para português do Brasil, com patches para a edição PSP e para a **HD ver.**.
 
 Esta distribuição contém somente as diferenças produzidas pela tradução. Nenhuma ISO, ROM ou outro arquivo completo do jogo é fornecido.
 
@@ -16,8 +16,10 @@ A tradução toma como referência a terminologia oficial em português do Brasi
 - descrições de armas e armaduras traduzidas, com os nomes mantidos conforme a base em inglês;
 - missões, objetivos e resultados;
 - diálogos, tutoriais e textos de ajuda;
-- textos de interface e elementos gráficos localizados;
+- textos de interface e elementos gráficos localizados na edição PSP;
 - padronização terminológica em português do Brasil.
+
+A **HD ver.** recebe os textos traduzidos da edição PSP, com adaptações para seus textos e menus. Os elementos gráficos permanecem como na base em inglês.
 
 ## Vídeo da tradução
 https://www.youtube.com/watch?v=Uh9X6GgBxfI
@@ -55,15 +57,16 @@ https://www.youtube.com/watch?v=Uh9X6GgBxfI
 
 ## Versão do patch
 
-**v1.0**, primeira versão pública da tradução, lançada em 15/11/2026.
+**v1.0**, primeira versão pública da tradução, lançada em 15/11/2026. Patch para a **HD ver.** incluído na mesma release.
 
 ## Requisitos
 
-- Uma cópia própria da edição japonesa de *Monster Hunter Portable 3rd* para PSP, com a tradução inglesa **v6.1.0** ou **v6.2.2** da **Team Maverick One** já aplicada.
+- Para PSP, uma cópia própria da edição japonesa de *Monster Hunter Portable 3rd*, com a tradução inglesa **v6.1.0** ou **v6.2.2** da **Team Maverick One** já aplicada.
+- Para **HD ver.**, uma cópia própria da imagem `Monster Hunter Portable 3rd HD ver (English v6.1.0)[Team Maverick One].iso`, correspondente à base informada abaixo.
 - Um programa compatível com patches Xdelta 3, obtido pelo próprio usuário.
-- Aproximadamente 1,21 GB livres para a nova ISO.
+- Aproximadamente 1,21 GB livres para a ISO PSP ou 1,33 GB para a ISO HD ver.
 
-### ISOs base
+### ISOs base PSP
 
 | Propriedade | Inglês v6.1.0 | Inglês v6.2.2 |
 | --- | --- | --- |
@@ -72,7 +75,16 @@ https://www.youtube.com/watch?v=Uh9X6GgBxfI
 | Tamanho | 1.207.140.352 bytes | 1.207.140.352 bytes |
 | SHA-256 | `9f3f19f2cd58a1ed0fb2654c65c075ac9a36f38af15fa6102b602c94e9d49bbd` | `5f9a33a725da226b2cce241f1238521753f0dfd5faa85fbb9d48e3b506ef0c77` |
 
-A ISO japonesa sem o patch em inglês, a edição HD e arquivos compactados são incompatíveis.
+### ISO base HD ver.
+
+| Propriedade | Valor |
+| --- | --- |
+| Edição | Monster Hunter Portable 3rd HD ver., Team Maverick One v6.1.0 |
+| Arquivo base | `Monster Hunter Portable 3rd HD ver (English v6.1.0)[Team Maverick One].iso` |
+| Tamanho | 1.323.565.056 bytes |
+| SHA-256 | `04369cfca97875f3fcaa9bf345219b4a0ba175c43e54c8818837c1f64c9542b8` |
+
+Escolha o patch correspondente à sua edição e à versão da tradução em inglês. A ISO japonesa sem o patch em inglês e arquivos compactados são incompatíveis.
 
 ## Como instalar
 
@@ -80,17 +92,20 @@ A ISO japonesa sem o patch em inglês, a edição HD e arquivos compactados são
 
    | ISO base | Patch |
    | --- | --- |
-   | Inglês v6.1.0 | [`MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta) |
-   | Inglês v6.2.2 | [`MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta) |
+   | PSP — Inglês v6.1.0 | [`MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.1.0.xdelta) |
+   | PSP — Inglês v6.2.2 | [`MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta`](MHP3rd_PT-BR_v1.0_base_v6.2.2.xdelta) |
+   | HD ver. — Inglês v6.1.0 | [`MHP3rd_HD_Ver_PT-BR_v1.0_base_v6.1.0.xdelta`](MHP3rd_HD_Ver_PT-BR_v1.0_base_v6.1.0.xdelta) |
 
 2. Instale ou baixe um aplicador compatível com Xdelta 3.
 3. Selecione sua ISO base como arquivo de origem.
 4. Selecione o arquivo `.xdelta` baixado como patch.
-5. Escolha `Monster Hunter Portable 3rd (PT-BR) v1.0.iso` como arquivo de saída.
+5. Escolha `Monster Hunter Portable 3rd (PT-BR) v1.0.iso` para PSP ou `MHP3rd_HD_Ver_PT-BR_v1.0.iso` para HD ver. como arquivo de saída.
 
 Confirme os hashes informados abaixo antes de jogar. Preserve a ISO original.
 
 ## Resultado esperado
+
+### PSP
 
 | Propriedade | Valor |
 | --- | --- |
@@ -98,7 +113,17 @@ Confirme os hashes informados abaixo antes de jogar. Preserve a ISO original.
 | Tamanho | 1.207.140.352 bytes |
 | SHA-256 | `c780d5e6ace24d697d28a6d401027eff7516661fa9af73e65962b7d81742ec3f` |
 
-As duas bases produzem a mesma ISO traduzida. Consulte [CHECKSUMS.md](CHECKSUMS.md) para conferir o SHA-256 de cada patch.
+As duas bases PSP produzem a mesma ISO traduzida.
+
+### HD ver.
+
+| Propriedade | Valor |
+| --- | --- |
+| Nome sugerido | `MHP3rd_HD_Ver_PT-BR_v1.0.iso` |
+| Tamanho | 1.323.565.056 bytes |
+| SHA-256 | `f6b508bf399ac0d79f533c10a07d3d04d8b32b8c02b31bb803ec50098e2ef5a3` |
+
+Consulte [CHECKSUMS.md](CHECKSUMS.md) para conferir o SHA-256 de cada base, patch e ISO traduzida.
 
 ## Problemas conhecidos
 
