@@ -62,7 +62,7 @@ https://www.youtube.com/watch?v=Uh9X6GgBxfI
 ## Requisitos
 
 - Para PSP, uma cópia própria da edição japonesa de *Monster Hunter Portable 3rd*, com a tradução inglesa **v6.1.0** ou **v6.2.2** da **Team Maverick One** já aplicada.
-- Para **HD ver.**, uma cópia própria da imagem `Monster Hunter Portable 3rd HD ver (English v6.1.0)[Team Maverick One].iso`, correspondente à base informada abaixo.
+- Para **HD ver.**, uma cópia da edição japonesa com a tradução inglesa **v6.1.0** já aplicada.
 - Um programa compatível com patches Xdelta 3, obtido pelo próprio usuário.
 - Aproximadamente 1,21 GB livres para a ISO PSP ou 1,33 GB para a ISO HD ver.
 
