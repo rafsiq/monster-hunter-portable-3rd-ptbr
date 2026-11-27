@@ -45,4 +45,4 @@ jobs:
               exit 1
             fi
           done
-          gh api --method PATCH "repos/$GH_REPO/releases/$release_id" -f body="$RELEASE_NOTES" -f tag_name=v1.1 -f target_commitish=41e7a11bf5276374850dbdc408c75aef884894f0 -F draft=false -f make_latest=true --silent
+          gh api --method PATCH "repos/$GH_REPO/releases/$release_id" -f body="$RELEASE_NOTES" -f tag_name=v1.1 -f target_commitish="$GITHUB_SHA" -F draft=false -f make_latest=true --silent
