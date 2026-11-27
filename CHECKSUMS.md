@@ -12,3 +12,8 @@ Algoritmo SHA-256.
 | ISO base HD ver. em inglês v6.1.0 (Team Maverick One) | `04369cfca97875f3fcaa9bf345219b4a0ba175c43e54c8818837c1f64c9542b8` |
 | `MHP3rd_HD_Ver_PT-BR_v1.0_base_v6.1.0.xdelta` | `cb9c6b4a08907e527126bf5577febcf36f4d00a283c472091a41a9efb21652cd` |
 | ISO HD ver. traduzida resultante da v1.0 | `f6b508bf399ac0d79f533c10a07d3d04d8b32b8c02b31bb803ec50098e2ef5a3` |
+| `MHP3rd_HD_Ver_PT-BR_v1.1_base_v6.1.0.xdelta` | `2b2dc812b541fc8d1256ebd1e97052eff7a9513feb83c7ffe2216d08547a6166` |
+| `MHP3rd_PT-BR_v1.1_base_v6.1.0.xdelta` | `52b8af4d286dd67b173ea3261ee6df8e0022a6a30b9b4e9b757f5b1d480bda5d` |
+| `MHP3rd_PT-BR_v1.1_base_v6.2.2.xdelta` | `9b2be500f500b38dc011208e821c5a70f6b0e240bd9870b5974fc3f3974d899b` |
+| ISO PSP traduzida resultante da v1.1 | `699ab9d088fb41b520bc96f4f9b6d3d74a72ac6761260a1a33d85b0688c2abf2` |
+| ISO HD ver. traduzida resultante da v1.1 | `d4a8a8a65bf59dfdf077ec9252a209918a4e4062777d6e3235f6af248261d43a` |
