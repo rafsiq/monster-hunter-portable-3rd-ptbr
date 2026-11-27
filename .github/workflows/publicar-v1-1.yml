@@ -35,7 +35,18 @@ jobs:
           if ! gh release view v1.1 --repo "$GH_REPO" > /dev/null 2>&1; then
             gh release create v1.1 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Monster Hunter Portable 3rd — Tradução PT-BR v1.1" --notes-file "$RUNNER_TEMP/mhp3rd-v1.1-notes.md" --draft
           fi
-          while IFS=$'\t' read -r patch_name patch_sha; do
+          release_id=$(gh api "repos/$GH_REPO/releases" --jq '.[] | select(.tag_name == "v1.1") | .id')
+          test -n "$release_id"
+          while IFS=            existing_digest=$(gh api "repos/$GH_REPO/releases/$release_id" --jq ".assets[] | select(.name == \"$patch_name\") | .digest")
+            if [ -z "$existing_digest" ]; then
+              gh release upload v1.1 "$RUNNER_TEMP/$patch_name" --repo "$GH_REPO"
+            elif [ "$existing_digest" != "sha256:$patch_sha" ]; then
+              echo "A release já contém um arquivo com hash diferente." >&2
+              exit 1
+            fi
+          done < <(printf '%s' "$PATCHES" | jq -r '.[] | [.name, .sha256] | @tsv')
+          gh release edit v1.1 --repo "$GH_REPO" --notes-file "$RUNNER_TEMP/mhp3rd-v1.1-notes.md" --draft=false --latest
+\t' read -r patch_name patch_sha; do
             existing_digest=$(gh api "repos/$GH_REPO/releases/tags/v1.1" --jq ".assets[] | select(.name == \"$patch_name\") | .digest")
             if [ -z "$existing_digest" ]; then
               gh release upload v1.1 "$RUNNER_TEMP/$patch_name" --repo "$GH_REPO"
