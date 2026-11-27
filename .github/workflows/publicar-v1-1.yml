@@ -27,7 +27,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          printf '%s\n' "$RELEASE_NOTES" > "$RUNNER_TEMP/mhp3rd-v1.1-notes.md"
+          release_id=460130647
+          tag_name=$(gh api "repos/$GH_REPO/releases/$release_id" --jq .tag_name)
+          test "$tag_name" = "v1.1"
           for index in 0 1 2; do
             patch_name=$(printf '%s' "$PATCHES" | jq -r ".[$index].name")
             patch_blob=$(printf '%s' "$PATCHES" | jq -r ".[$index].blob")
@@ -35,21 +37,12 @@ jobs:
             patch_path="$RUNNER_TEMP/$patch_name"
             gh api "repos/$GH_REPO/git/blobs/$patch_blob" --jq .content | base64 --decode > "$patch_path"
             printf '%s  %s\n' "$patch_sha" "$patch_path" | sha256sum --check --status
-          done
-          if ! gh release view v1.1 --repo "$GH_REPO" > /dev/null 2>&1; then
-            gh release create v1.1 --repo "$GH_REPO" --target "$GITHUB_SHA" --title "Monster Hunter Portable 3rd — Tradução PT-BR v1.1" --notes-file "$RUNNER_TEMP/mhp3rd-v1.1-notes.md" --draft
-          fi
-          release_id=$(gh api "repos/$GH_REPO/releases" --jq '.[] | select(.tag_name == "v1.1") | .id')
-          test -n "$release_id"
-          for index in 0 1 2; do
-            patch_name=$(printf '%s' "$PATCHES" | jq -r ".[$index].name")
-            patch_sha=$(printf '%s' "$PATCHES" | jq -r ".[$index].sha256")
             existing_digest=$(gh api "repos/$GH_REPO/releases/$release_id" --jq ".assets[] | select(.name == \"$patch_name\") | .digest")
             if [ -z "$existing_digest" ]; then
-              gh release upload v1.1 "$RUNNER_TEMP/$patch_name" --repo "$GH_REPO"
+              gh api --method POST "https://uploads.github.com/repos/$GH_REPO/releases/$release_id/assets?name=$patch_name" --header "Content-Type: application/octet-stream" --input "$patch_path" --silent
             elif [ "$existing_digest" != "sha256:$patch_sha" ]; then
               echo "A release já contém um arquivo com hash diferente." >&2
               exit 1
             fi
           done
-          gh release edit v1.1 --repo "$GH_REPO" --notes-file "$RUNNER_TEMP/mhp3rd-v1.1-notes.md" --draft=false --latest
+          gh api --method PATCH "repos/$GH_REPO/releases/$release_id" -f body="$RELEASE_NOTES" -f tag_name=v1.1 -f target_commitish=41e7a11bf5276374850dbdc408c75aef884894f0 -F draft=false -f make_latest=true --silent
